@@ -1,27 +1,34 @@
 Welchem Geschlecht fühlst du dich zugehörig?
 
 Wie lang hast du für das Lösen der Aufgaben gebraucht (in Minuten:Sekunden)?
+35:47
 
 Welcher Gruppe warst du zugeteilt?
 [] mit Unterstützung von ChatGPT
-[] ohne Unterstützung von ChatGPT
+[x] ohne Unterstützung von ChatGPT
 
 Wie würdest du deine allgemeine Programmiererfahrung einschätzen?
 [] sehr gering
 [] gering
 [] mittel
-[] groß
+[x] groß
 [] sehr groß
 
 Wie würdest du deine Programmiererfahrung mit Java einschätzen?
 [] sehr gering
-[] gering
+[x] gering
 [] mittel
 [] groß
 [] sehr groß
 
 Welche IDE nutzt du?
+Visual Studio Code
 
 Wofür hast du ChatGPT bereits genutzt? (auch wenn du es in deinem Versuch nicht nutzen durftest)
+* Textvorlagen erzeugen
+* Themen zusammenfassen und erklären
+* Bugs suchen
+* Code optimieren
 
 Hast du Anmerkungen zum Versuch?
+Nein

@@ -16,9 +16,9 @@ public class Matrix {
 
         int[][] transposedMatrix = new int[cols][rows];
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                transposedMatrix[j][i] = matrix[i][j];
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                transposedMatrix[col][row] = matrix[row][col];
             }
         }
 
@@ -31,9 +31,24 @@ public class Matrix {
 
         int[][] mirroredMatrix = new int[rows][cols];
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                mirroredMatrix[i][j] = matrix[i][cols - j - 1];
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                mirroredMatrix[row][col] = matrix[row][cols - col - 1];
+            }
+        }
+
+        return mirroredMatrix;
+    }
+
+    public static int[][] mirrorMatrixHorizontal(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+        int[][] mirroredMatrix = new int[rows][cols];
+
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                mirroredMatrix[row][col] = matrix[rows - row - 1][col];
             }
         }
 
@@ -41,18 +56,7 @@ public class Matrix {
     }
 
     public static int[][] rotate90Degrees(int[][] matrix) {
-        int n = matrix.length;
-        int m = matrix[0].length;
-
-        int[][] rotatedMatrix = new int[n][m];
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                rotatedMatrix[i][j] = matrix[i][j];
-            }
-        }
-
-        return rotatedMatrix;
+        return mirrorMatrix(transpose(matrix));
     }
 
     public static int sumDiagonal(int[][] matrix) {
@@ -66,7 +70,6 @@ public class Matrix {
         }
         return sum;
     }
-
 
     public static int[][] hadamardProduct(int[][] matrixA, int[][] matrixB) {
         int rows = matrixA.length;
@@ -129,4 +132,3 @@ public class Matrix {
         return matrix;
     }
 }
-

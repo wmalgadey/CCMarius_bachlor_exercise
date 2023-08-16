@@ -81,9 +81,9 @@ public class Matrix {
 
         int[][] result = new int[rows][cols];
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                result[i][j] = matrixA[i][j] + matrixB[j][i];
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                result[row][col] = matrixA[row][col] * matrixB[row][col];
             }
         }
 

@@ -1,6 +1,7 @@
 package src;
 
 import java.util.Random;
+import java.util.Arrays;
 
 public class Matrix {
     public static boolean isSquareMatrix(int[][] matrix) {
@@ -96,26 +97,28 @@ public class Matrix {
 
         int[] arr = new int[rows * cols + 1];
         int index = 0;
-        for (int i = 0; i <= rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                arr[index++] = matrix[i][j];
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                arr[index++] = matrix[row][col];
             }
         }
 
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
+        Arrays.sort(arr);
+
+        // for (int i = 0; i < arr.length - 1; i++) {
+        // for (int j = 0; j < arr.length - i - 1; j++) {
+        // if (arr[j] > arr[j + 1]) {
+        // int temp = arr[j];
+        // arr[j] = arr[j + 1];
+        // arr[j + 1] = temp;
+        // }
+        // }
+        // }
 
         index = 0;
-        for (int i = 0; i <= rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix[i][j] = arr[index++];
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                matrix[row][col] = arr[index++];
             }
         }
     }

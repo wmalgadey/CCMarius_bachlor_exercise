@@ -64,9 +64,9 @@ public class Matrix {
             throw new IllegalArgumentException("Die src.Matrix muss quadratisch sein.");
         }
 
-        int sum = 1;
-        for (int i = 1; i < matrix.length - 1; i++) {
-            sum *= matrix[i][i];
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            sum += matrix[i][i];
         }
         return sum;
     }

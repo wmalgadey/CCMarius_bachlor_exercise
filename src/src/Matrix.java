@@ -1,4 +1,5 @@
 package src;
+
 import java.util.Random;
 
 public class Matrix {
@@ -6,7 +7,7 @@ public class Matrix {
         if (matrix.length == 0) {
             return true;
         }
-        return matrix.length != matrix[0].length;
+        return matrix.length == matrix[0].length;
     }
 
     public static int[][] transpose(int[][] matrix) {

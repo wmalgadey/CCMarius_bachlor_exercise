@@ -14,11 +14,11 @@ public class Matrix {
         int rows = matrix.length;
         int cols = matrix[0].length;
 
-        int[][] transposedMatrix = new int[rows][cols];
+        int[][] transposedMatrix = new int[cols][rows];
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                transposedMatrix[j][i] = matrix[j + 1][i + 1];
+                transposedMatrix[j][i] = matrix[i][j];
             }
         }
 

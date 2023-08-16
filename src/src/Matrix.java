@@ -31,9 +31,9 @@ public class Matrix {
 
         int[][] mirroredMatrix = new int[rows][cols];
 
-        for (int i = 1; i < rows; i++) {
-            for (int j = 1; j < cols; j++) {
-                mirroredMatrix[i][j] = matrix[j][j];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                mirroredMatrix[i][j] = matrix[i][cols - j - 1];
             }
         }
 
